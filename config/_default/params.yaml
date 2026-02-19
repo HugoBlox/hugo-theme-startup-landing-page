@@ -13,18 +13,28 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Your Name"
+    name: "Company Name"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: ""
     # Schema.org type for structured data
-    type: person                        # person | organization | local_business
+    type: organization                        # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: ""
+    tagline: "The framework for Hugo."
     # Site meta description for search engines and social sharing
     description: "The highly-customizable Hugo Academic theme powered by HugoBlox Kit. Easily create your personal academic website."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
-      twitter: "LoreLabs_"              # Twitter/X handle for Twitter Cards (without @)
+      twitter: "MakeOwnable"              # Twitter/X handle for Twitter Cards (without @)
+      # Site-wide social links (rendered in footer, etc.)
+      links:
+        - icon: brands/x
+          url: https://x.com/MakeOwnable
+        - icon: brands/github
+          url: https://github.com/HugoBlox/kit
+        - icon: brands/discord
+          url: https://discord.gg/z8wNYzb
+        - icon: brands/linkedin
+          url: https://linkedin.com/company/example
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
@@ -83,9 +93,15 @@ hugoblox:
   header:
     enable: true
     # Header style variant
-    style: navbar                       # navbar | navbar-simple | minimal
+    block: navbar                       # navbar | navbar-simple
     # Stick to top on scroll
     sticky: true
+    # Show logo in navbar
+    show_logo: false
+    # Show site title text in navbar
+    show_title: true
+    # Override navbar title (defaults to identity.name)
+    title: ""
     # Menu alignment
     align: center                       # left | center | right
     # Feature toggles
@@ -105,8 +121,15 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   footer:
     # Footer style variant
-    style: minimal                      # minimal | columns | centered
+    style: columns                      # minimal | columns | centered
+    show_logo: true
+    show_title: true
+    show_tagline: true
+    # Override footer title (defaults to identity.name)
+    title: ""
     language_switcher: true
+    # Show social icons from identity.social.links
+    show_social: true
     # Custom footer text (HTML supported)
     text: ""
 
@@ -116,9 +139,9 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: "© {year} {name}."
     license:
-      type: cc                          # cc | custom
+      type: custom                          # cc | custom
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
