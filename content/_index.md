@@ -36,6 +36,35 @@ sections:
           size: cover
           position: center
           parallax: false
+  - block: logos
+    content:
+      title: Trusted by teams at
+      items:
+        - icon: brands/github
+          name: GitHub
+        - icon: brands/google
+          name: Google
+        - icon: brands/microsoft
+          name: Microsoft
+        - icon: brands/nvidia
+          name: NVIDIA
+        - icon: brands/openai
+          name: OpenAI
+        - icon: brands/anthropic
+          name: Anthropic
+        - icon: brands/stripe
+          name: Stripe
+        - icon: brands/vercel
+          name: Vercel
+    design:
+      layout: marquee
+      logo_style: grayscale
+      logo_size: md
+      marquee_speed: 35
+      css_class: "bg-gray-50 dark:bg-gray-900"
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]
+
   - block: stats
     content:
       items:
@@ -81,6 +110,95 @@ sections:
         - name: Swappable Blocks
           icon: rectangle-group
           description: Build your pages with blocks - no coding required!
+  - block: pricing
+    id: pricing
+    content:
+      title: "Simple, transparent pricing"
+      subtitle: "Start for free. Upgrade when you're ready. No credit card required."
+      billing_toggle:
+        enabled: true
+        monthly_label: Monthly
+        yearly_label: Yearly
+        yearly_discount: "Save 20%"
+      tiers:
+        - name: Starter
+          description: "Perfect for personal projects and portfolios."
+          price:
+            monthly: "0"
+            yearly: "0"
+            currency: "$"
+          price_note: "Free forever"
+          highlight: false
+          cta:
+            text: Get started free
+            url: https://hugoblox.com/templates/
+            icon: hero/arrow-right
+            style: outline
+          features:
+            - text: "5 pages"
+              included: true
+            - text: "1 GB storage"
+              included: true
+            - text: "Custom domain"
+              included: false
+            - text: Analytics dashboard
+              included: false
+            - text: Priority support
+              included: false
+        - name: Pro
+          badge: Most popular
+          description: "For freelancers and teams building seriously."
+          price:
+            monthly: "19"
+            yearly: "15"
+            currency: "$"
+          price_suffix: /month
+          price_note_monthly: "Billed monthly"
+          price_note_yearly: "Billed annually"
+          highlight: true
+          cta:
+            text: Start free trial
+            url: https://hugoblox.com/templates/
+            icon: hero/arrow-right
+            style: primary
+          features:
+            - text: Unlimited pages
+              included: true
+            - text: "10 GB storage"
+              included: true
+            - text: Custom domain
+              included: true
+            - text: Analytics dashboard
+              included: true
+            - text: Priority support
+              included: false
+        - name: Business
+          description: "Scale with confidence and dedicated support."
+          price:
+            monthly: "49"
+            yearly: "39"
+            currency: "$"
+          price_suffix: /month
+          price_note_monthly: "Billed monthly"
+          price_note_yearly: "Billed annually"
+          highlight: false
+          cta:
+            text: Start free trial
+            url: https://hugoblox.com/templates/
+            icon: hero/arrow-right
+            style: outline
+          features:
+            - text: Unlimited pages
+              included: true
+            - text: "100 GB storage"
+              included: true
+            - text: Custom domain
+              included: true
+            - text: Analytics dashboard
+              included: true
+            - text: Priority support
+              included: true
+
   - block: cta-image-paragraph
     id: solutions
     content:
