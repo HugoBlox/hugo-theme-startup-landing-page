@@ -9,11 +9,14 @@ main:
   - name: Features
     url: /#features
     weight: 20
-  - name: Solutions
-    url: /#solutions
+  - name: Compare
+    url: /#compare
+    weight: 25
+  - name: Pricing
+    url: /#pricing
     weight: 30
-  - name: Changelog
-    url: /changelog/
+  - name: FAQ
+    url: /#faq
     weight: 35
   - name: Resources
     weight: 40
@@ -21,6 +24,9 @@ main:
   - parent: Resources
     name: Blog
     url: blog/
+  - parent: Resources
+    name: Changelog
+    url: /changelog/
 
 # Footer links (4-column layout)
 #   Top-level items become column headings, children become links.
@@ -37,8 +43,12 @@ footer:
     weight: 20
   - parent: Product
     name: Pricing
-    url: "#"
+    url: /#pricing
     weight: 30
+  - parent: Product
+    name: Compare
+    url: /#compare
+    weight: 35
   - parent: Product
     name: Changelog
     url: /changelog/
